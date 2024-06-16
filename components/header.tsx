@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import styles from "@/styles/Home.module.css"; // Corrected the import statement
+import styles from "@/styles/Home.module.css";
 import {
   useActiveAccount,
   useConnect,
@@ -12,7 +11,7 @@ import { createWallet, injectedProvider } from "thirdweb/wallets";
 import { Beans } from "@web3uikit/icons";
 import { client } from "@/configs";
 
-export default function Header() {
+export function Header() {
   const { connect, isConnecting, error } = useConnect();
   const { disconnect } = useDisconnect();
   const activeAccount = useActiveAccount();
